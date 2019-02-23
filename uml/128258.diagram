@@ -1,0 +1,12 @@
+format 221
+
+classcanvas 128002 class_ref 128770 // User
+  simpleclassdiagramsettings end
+  xyz 15.4 114.8 2000
+end
+usecasecanvas 128130 usecase_ref 128130 // Case
+  xyzwh 54.2 176.6 3005 64 32 label_xy 70 209
+end
+line 128258 ----
+  from ref 128002 z 3006 label "UML" max_width 255 xyz 67.5 153.5 3000 to ref 128130
+end

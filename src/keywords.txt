@@ -1,0 +1,51 @@
+################################################################################
+# Syntax Coloring Map For poo-tuto Library
+################################################################################
+
+################################################################################
+# Datatypes (KEYWORD1)
+################################################################################
+Led	KEYWORD1
+Switch	KEYWORD1
+SwitchInt	KEYWORD1
+Chaser	KEYWORD1
+Sense	KEYWORD1
+ChaserSwitch	KEYWORD1
+
+################################################################################
+# Methods and Functions (KEYWORD2)
+################################################################################
+Led	KEYWORD2
+Switch	KEYWORD2
+SwitchInt	KEYWORD2
+Chaser	KEYWORD2
+ChaserSwitch	KEYWORD2
+begin	KEYWORD2
+write	KEYWORD2
+read	KEYWORD2
+toggle	KEYWORD2
+pin	KEYWORD2
+activeState	KEYWORD2
+poll	KEYWORD2
+stateChanged	KEYWORD2
+debounce	KEYWORD2
+edge	KEYWORD2
+setDebounce	KEYWORD2
+delay	KEYWORD2
+setDelay	KEYWORD2
+on	KEYWORD2
+setOn	KEYWORD2
+sense	KEYWORD2
+setSense	KEYWORD2
+
+
+################################################################################
+# Instances (KEYWORD2)
+################################################################################
+
+################################################################################
+# Constants (LITERAL1)
+################################################################################
+Right	LITERAL1
+Left	LITERAL1
+

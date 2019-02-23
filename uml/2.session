@@ -1,0 +1,16 @@
+window_sizes 1920 949 450 1464 762 128
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128130 // Chase
+    1464 762 100 A4 0 0
+end
+show_stereotypes
+selected usecasediagram_ref 128258 // Chase
+open
+  class_ref 128386 // PinLed
+  class_ref 128258 // Sense
+  classview_ref 128258 // include
+  deploymentview_ref 128130 // include
+  usecaseview_ref 128130 // Use cases
+end
+end
