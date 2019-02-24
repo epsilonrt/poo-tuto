@@ -11,26 +11,33 @@ SwitchInt	KEYWORD1
 Chaser	KEYWORD1
 Sense	KEYWORD1
 ChaserSwitch	KEYWORD1
+ChangedHandler	KEYWORD1
 
 ################################################################################
 # Methods and Functions (KEYWORD2)
 ################################################################################
-Led	KEYWORD2
-Switch	KEYWORD2
 SwitchInt	KEYWORD2
-Chaser	KEYWORD2
-ChaserSwitch	KEYWORD2
+
+# Led
+Led	KEYWORD2
 begin	KEYWORD2
 write	KEYWORD2
 read	KEYWORD2
 toggle	KEYWORD2
 pin	KEYWORD2
 activeState	KEYWORD2
+
+# Switch
+Switch	KEYWORD2
 poll	KEYWORD2
 stateChanged	KEYWORD2
 debounce	KEYWORD2
-edge	KEYWORD2
 setDebounce	KEYWORD2
+edge	KEYWORD2
+userData	KEYWORD2
+
+# Chaser
+Chaser	KEYWORD2
 delay	KEYWORD2
 setDelay	KEYWORD2
 on	KEYWORD2
@@ -38,6 +45,17 @@ setOn	KEYWORD2
 sense	KEYWORD2
 setSense	KEYWORD2
 
+# ChaserSwitch
+ChaserSwitch	KEYWORD2
+stepDelay	KEYWORD2
+setStepDelay	KEYWORD2
+minDelay	KEYWORD2
+setMinDelay	KEYWORD2
+maxDelay	KEYWORD2
+setMaxDelay	KEYWORD2
+changedHandler	KEYWORD2
+setChangedHandler	KEYWORD2
+callChangedHandler	KEYWORD2
 
 ################################################################################
 # Instances (KEYWORD2)
@@ -46,6 +64,7 @@ setSense	KEYWORD2
 ################################################################################
 # Constants (LITERAL1)
 ################################################################################
+# Chaser::Sense
 Right	LITERAL1
 Left	LITERAL1
 

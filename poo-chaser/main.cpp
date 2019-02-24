@@ -1,7 +1,14 @@
 // POO Tutorial
-// Led Class Demo
+// Chaser Class Demo
 
-// Use of the Led class
+// This program helps to check the class.
+
+// The chase runs with default values for 10s,
+// then the lighting delay is changed to 500ms for 10s,
+// then the direction of operation is reversed for 10s,
+// before being stopped for 10s, and it starts again.
+
+// This program can be compiled on Arduino and with Piduino on Pi boards.
 
 // Created on February 23, 2019
 
@@ -15,16 +22,23 @@
 
 #include "poo-chaser.h"
 
-// <DANGER> Be careful !!! Before launching this program :
-//    -> Check that the pins below is well connected to LEDs ! <-
-// Pin 0 > Header Pin 11, GPIO17 for RPi, GPIOA0 for NanoPi
-// Pin 1 > Header Pin 12, GPIO18 for RPi, GPIOA6 for NanoPi
-// Pin 2 > Header Pin 13, GPIO27 for RPi, GPIOA2 for NanoPi
-Led leds[] = { Led (0, false), Led (1, false), Led (2, false) };
-Chaser chaser (leds, 3);
-
+// Function prototypes
 void printChaserStatus (unsigned long maxtime);
 void chaserFor (unsigned long maxtime);
+
+// <<<< ----> settings below to be modified according to your wiring <----- >>>>
+// -----------------------------------------------------------------------------
+// <DANGER> Be careful !!! Before launching this program :
+//    -> Check that the pins below is well connected to LEDs ! <-
+// Pin 0, Low level lights the led > Header Pin 11, GPIO17 on RPi, GPIOA0 on NPi
+// Pin 1, Low level lights the led > Header Pin 12, GPIO18 on RPi, GPIOA6 on NPi
+// Pin 2, Low level lights the led > Header Pin 13, GPIO27 on RPi, GPIOA2 on NPi
+const int nofLeds = 3;
+Led leds[nofLeds] = { Led (0, false), Led (1, false), Led (2, false) };
+// <<<< ---->               End of the settings                      <----- >>>>
+// -----------------------------------------------------------------------------
+
+Chaser chaser (leds, nofLeds);
 
 void setup() {
 

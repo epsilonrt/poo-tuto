@@ -1,7 +1,14 @@
 // POO Tutorial
 // Led Class Demo
 
-// Use of the Led class
+// This program helps to check the class.
+
+// It blinks the LED by lighting it for 100 ms then turning it off for 400 ms. 
+// At each step, it checks that the value read corresponds to the value written 
+// and displays a '+' then a '-' on the console. In case of error a '!' is printed.
+// Then we use the toggle function to flash the led (500/500), then start again.
+
+// This program can be compiled on Arduino and with Piduino on Pi boards.
 
 // Created on February 23, 2019
 
@@ -15,14 +22,18 @@
 
 #include "poo-led.h"
 
+// <<<< ----> settings below to be modified according to your wiring <----- >>>>
+// -----------------------------------------------------------------------------
 // <DANGER> Be careful !!! Before launching this program :
 //    -> Check that the pin below is well connected to an LED ! <-
-Led led (0, false); // Header Pin 11: GPIO17 for RPi, GPIOA0 for NanoPi
+// Pin 0, Low level lights the led > Header Pin 11, GPIO17 on RPi, GPIOA0 on NPi
+Led led (0, false);
+// <<<< ---->               End of the settings                      <----- >>>>
+// -----------------------------------------------------------------------------
 
 void setup() {
 
   Console.begin (115200);
-  // initialize the led
   led.begin ();
 }
 

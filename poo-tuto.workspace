@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="poo-tuto" Database="" Version="10.0.0">
   <Project Name="poo-led" Path="poo-led/poo-led.project" Active="No"/>
-  <Project Name="poo-switch-int" Path="poo-switch-int/poo-switch-int.project" Active="Yes"/>
+  <Project Name="poo-switch-int" Path="poo-switch-int/poo-switch-int.project" Active="No"/>
   <Project Name="poo-chaser" Path="poo-chaser/poo-chaser.project" Active="No"/>
-  <Project Name="poo-chaser-switch" Path="poo-chaser-switch/poo-chaser-switch.project" Active="No"/>
+  <Project Name="poo-chaser-switch" Path="poo-chaser-switch/poo-chaser-switch.project" Active="Yes"/>
   <Project Name="poo-switch" Path="poo-switch/poo-switch.project" Active="No"/>
-  <Project Name="poo-tuto" Path="poo-tuto.project"/>
+  <Project Name="poo-tuto" Path="poo-tuto.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>

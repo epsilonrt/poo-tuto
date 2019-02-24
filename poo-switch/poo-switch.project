@@ -7,10 +7,6 @@
     <File Name="../src/poo-led.cpp"/>
     <File Name="../src/poo-switch.cpp"/>
   </VirtualDirectory>
-  <VirtualDirectory Name="include">
-    <File Name="../src/poo-led.h"/>
-    <File Name="../src/poo-switch.h"/>
-  </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="-std=c++14;$(shell pkg-config --cflags piduino)" C_Options="-std=c99;$(shell pkg-config --cflags piduino)" Assembler="">

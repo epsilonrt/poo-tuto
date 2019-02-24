@@ -105,8 +105,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <VirtualDirectory Name="include">
-    <File Name="../src/poo-led.h"/>
-    <File Name="../src/poo-chaser.h"/>
-  </VirtualDirectory>
 </CodeLite_Project>

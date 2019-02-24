@@ -1,8 +1,16 @@
-// Blink
+// POO Tutorial
+// SwitchInt Class Demo
 
-// Turns an LED on for one second, then off for one second, repeatedly.
+// This program helps to check the class.
 
-// Created 8 March 2018
+// It waits for the push button to be pressed and toggles the lighting of the 
+// led with each press.
+// 
+// The class runs in interrupt which consumes no CPU time on Pi board.
+
+// This program can be compiled only with Piduino on Pi boards.
+
+// Created on February 23, 2019
 
 // This example code is in the public domain.
 #ifdef __unix__
@@ -15,12 +23,20 @@
 #include "poo-led.h"
 #include "poo-switch-int.h"
 
+// Function prototypes
+void swIsr (void * unused);
+
+// <<<< ----> settings below to be modified according to your wiring <----- >>>>
+// -----------------------------------------------------------------------------
 // <DANGER> Be careful !!! Before launching this program :
 //    -> Check that the pin below is well connected to an LED ! <-
-Led led (0, false); // Header Pin 11: GPIO17 for RPi, GPIOA0 for NanoPi
-SwitchInt sw (3); // Header Pin 15: GPIO22 for RPi, GPIOA3 for NanoPi
+// Pin 0, Low level lights the led > Header Pin 11, GPIO17 on RPi, GPIOA0 on NPi
+Led led (0, false);
 
-void swIsr (void * unused);
+// Pin 3 > Header Pin 15, GPIO22 on RPi, GPIOA3 on NPi
+SwitchInt sw (3);
+// <<<< ---->               End of the settings                      <----- >>>>
+// -----------------------------------------------------------------------------
 
 void setup() {
 
@@ -30,6 +46,8 @@ void setup() {
 
 void loop () {
   // Press Ctrl+C to abort ...
+
+  // endless sleep, the process is woken up by interrupts.
   delay (-1);
 }
 

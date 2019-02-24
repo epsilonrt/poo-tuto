@@ -25,4 +25,5 @@ class Chaser {
     bool m_on;
     Sense m_sense;
     int m_delay;
+    unsigned long m_lastStep;
 };

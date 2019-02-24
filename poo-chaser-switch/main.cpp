@@ -1,7 +1,16 @@
 // POO Tutorial
-// Led Class Demo
+// ChaserSwitch Class Demo
 
-// Use of the Led class
+// This program helps to check the class.
+
+// The chaser runs with default values.
+// The push buttons allow you to change the settings:
+// - Button 1 allows you to stop and start the caterpillars.
+// - Button 2 reverses the direction of operation.
+// - Button 3 is used to change the duration of illumination.
+// Each change is displayed on the console.
+
+// This program can be compiled on Arduino and with Piduino on Pi boards.
 
 // Created on February 23, 2019
 
@@ -13,69 +22,49 @@
 #define Console Serial
 #endif
 
-#include "poo-chaser.h"
+#include "poo-chaser-switch.h"
 
+// Function prototypes
+void printChaserStatus (ChaserSwitch & c);
+
+// <<<< ----> settings below to be modified according to your wiring <----- >>>>
+// -----------------------------------------------------------------------------
 // <DANGER> Be careful !!! Before launching this program :
 //    -> Check that the pins below is well connected to LEDs ! <-
-// Pin 0 > Header Pin 11, GPIO17 for RPi, GPIOA0 for NanoPi
-// Pin 1 > Header Pin 12, GPIO18 for RPi, GPIOA6 for NanoPi
-// Pin 2 > Header Pin 13, GPIO27 for RPi, GPIOA2 for NanoPi
-Led leds[] = { Led (0, false), Led (1, false), Led (2, false) };
-Chaser chaser (leds, 3);
+// Pin 0, Low level lights the led > Header Pin 11, GPIO17 on RPi, GPIOA0 on NPi
+// Pin 1, Low level lights the led > Header Pin 12, GPIO18 on RPi, GPIOA6 on NPi
+// Pin 2, Low level lights the led > Header Pin 13, GPIO27 on RPi, GPIOA2 on NPi
+const int nofLeds = 3;
+Led leds[nofLeds] = { Led (0, false), Led (1, false), Led (2, false) };
 
-void printChaserStatus (unsigned long maxtime);
-void chaserFor (unsigned long maxtime);
+// Pin 3 > Header Pin 15, GPIO22 on RPi, GPIOA3 on NPi
+// Pin 4 > Header Pin 16, GPIO23 on RPi, GPIOG8 on NPi
+// Pin 5 > Header Pin 18, GPIO24 on RPi, GPIOG9 on NPi
+Switch buttons[] = { Switch (3), Switch (4), Switch (5) };
+// <<<< ---->               End of the settings                      <----- >>>>
+// -----------------------------------------------------------------------------
+
+ChaserSwitch chaser (leds, nofLeds, buttons);
 
 void setup() {
 
   Console.begin (115200);
-  // initialize the led
+  chaser.setChangedHandler (printChaserStatus);
   chaser.begin ();
 }
 
 void loop () {
   // Press Ctrl+C to abort ...
 
-  chaserFor (10000);
-
-  chaser.setDelay (500);
-  chaserFor (10000);
-
-  chaser.setSense (Chaser::Left);
-  chaserFor (10000);
-
-  chaser.setOn (false);
-  chaserFor (10000);
-
-  chaser.setDelay (100);
-  chaser.setSense (Chaser::Right);
-  chaser.setOn (true);
+  chaser.poll();
 }
 
-void printChaserStatus (unsigned long maxtime) {
+void printChaserStatus (ChaserSwitch & c) {
 
-  if (chaser.on()) {
-
-    Console.print ("Chaser On, to the ");
-    Console.print (chaser.sense() == Chaser::Right ? "right" : "left");
-    Console.print (" with a lighting time of ");
-    Console.print (chaser.delay());
-    Console.print (" ms");
-  }
-  else {
-
-    Console.print ("Chaser Off");
-  }
-  Console.print (", for a time of ");
-  Console.print (maxtime);
-  Console.println (" ms.");
-}
-
-void chaserFor (unsigned long maxtime) {
-
-  printChaserStatus (maxtime);
-  unsigned long t = millis();
-  while ( (millis() - t) < maxtime) {
-    chaser.poll();
-  }
+  Console.print (c.on() ? "On" : "Off");
+  Console.print (", to the ");
+  Console.print (c.sense() == Chaser::Right ? "right" : "left");
+  Console.print (" with ");
+  Console.print (c.delay());
+  Console.println (" ms delay.");
 }

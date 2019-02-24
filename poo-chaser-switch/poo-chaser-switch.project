@@ -102,12 +102,6 @@
       </Completion>
     </Configuration>
   </Settings>
-  <VirtualDirectory Name="include">
-    <File Name="../src/poo-led.h"/>
-    <File Name="../src/poo-switch.h"/>
-    <File Name="../src/poo-chaser.h"/>
-    <File Name="../src/poo-chaser-switch.h"/>
-  </VirtualDirectory>
   <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>
 </CodeLite_Project>

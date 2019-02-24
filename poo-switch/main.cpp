@@ -1,8 +1,17 @@
-// Blink
+// POO Tutorial
+// Switch Class Demo
 
-// Turns an LED on for one second, then off for one second, repeatedly.
+// This program helps to check the class.
 
-// Created 8 March 2018
+// It waits for the push button to be pressed and toggles the lighting of the 
+// led with each press.
+// 
+// The class works in polling with the poll () function which consumes a lot of 
+// CPU time on Pi board.
+
+// This program can be compiled on Arduino and with Piduino on Pi boards.
+
+// Created on February 23, 2019
 
 // This example code is in the public domain.
 #ifdef __unix__
@@ -15,10 +24,19 @@
 #include "poo-led.h"
 #include "poo-switch.h"
 
+// Function prototypes
+
+// <<<< ----> settings below to be modified according to your wiring <----- >>>>
+// -----------------------------------------------------------------------------
 // <DANGER> Be careful !!! Before launching this program :
 //    -> Check that the pin below is well connected to an LED ! <-
-Led led (0, false); // Header Pin 11: GPIO17 for RPi, GPIOA0 for NanoPi
-Switch sw (3); // Header Pin 15: GPIO22 for RPi, GPIOA3 for NanoPi
+// Pin 0, Low level lights the led > Header Pin 11, GPIO17 on RPi, GPIOA0 on NPi
+Led led (0, false);
+
+// Pin 3 > Header Pin 15, GPIO22 on RPi, GPIOA3 on NPi
+Switch sw (3);
+// <<<< ---->               End of the settings                      <----- >>>>
+// -----------------------------------------------------------------------------
 
 void swIsr (void * unused);
 
