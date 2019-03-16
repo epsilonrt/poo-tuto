@@ -66,6 +66,8 @@
     <File Name="src/poo-switch-int.cpp"/>
     <File Name="src/poo-pinled.cpp"/>
     <File Name="src/poo-led.cpp"/>
+    <File Name="src/poo-pcf8574.cpp"/>
+    <File Name="src/poo-wireslave.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="src/poo-chaser.h"/>
@@ -74,6 +76,8 @@
     <File Name="src/poo-switch.h"/>
     <File Name="src/poo-switch-int.h"/>
     <File Name="src/poo-led.h"/>
+    <File Name="src/poo-pcf8574.h"/>
+    <File Name="src/poo-wireslave.h"/>
   </VirtualDirectory>
   <Dependencies Name="Debug"/>
 </CodeLite_Project>
