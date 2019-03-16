@@ -21,7 +21,7 @@
 #define Console Serial
 #endif
 
-#include "poo-led.h"
+#include "poo-pinled.h"
 #include "poo-switch.h"
 
 // Function prototypes
@@ -31,7 +31,7 @@
 // <DANGER> Be careful !!! Before launching this program :
 //    -> Check that the pin below is well connected to an LED ! <-
 // Pin 0, Low level lights the led > Header Pin 11, GPIO17 on RPi, GPIOA0 on NPi
-Led led (0, false);
+PinLed led (0, false);
 
 // Pin 3 > Header Pin 15, GPIO22 on RPi, GPIOA3 on NPi
 Switch sw (3);

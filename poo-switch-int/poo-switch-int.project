@@ -7,6 +7,7 @@
     <File Name="../src/poo-led.cpp"/>
     <File Name="../src/poo-switch-int.cpp"/>
     <File Name="../src/poo-switch.cpp"/>
+    <File Name="../src/poo-pinled.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

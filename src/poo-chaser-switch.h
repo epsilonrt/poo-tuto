@@ -9,8 +9,8 @@ class ChaserSwitch : public Chaser {
     static const int nofButtons = 3; // 0: on, 1: sense, 2: delay
     typedef void (* ChangedHandler) (ChaserSwitch & chaser);
 
-    ChaserSwitch (Led leds[], int nofLeds);
-    ChaserSwitch (Led leds[], int nofLeds, Switch buttons[]);
+    ChaserSwitch (Led * leds, int nofLeds);
+    ChaserSwitch (Led * leds, int nofLeds, Switch buttons[]);
     void begin ();
     void poll();
     int stepDelay() const;

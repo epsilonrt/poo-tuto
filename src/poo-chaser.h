@@ -1,4 +1,5 @@
 #pragma once
+
 #include "poo-led.h"
 
 class Chaser {
@@ -8,7 +9,7 @@ class Chaser {
       Right,
       Left
     };
-    Chaser (Led leds[], int nofLeds);
+    Chaser (Led * leds, int nofLeds);
     void begin ();
     void poll();
     int delay() const;

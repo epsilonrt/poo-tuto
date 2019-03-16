@@ -1,5 +1,5 @@
 // POO Tutorial
-// Led Class Demo
+// PinLed Class Demo
 
 // This program helps to check the class.
 
@@ -20,14 +20,14 @@
 #define Console Serial
 #endif
 
-#include "poo-led.h"
+#include "poo-pinled.h"
 
 // <<<< ----> settings below to be modified according to your wiring <----- >>>>
 // -----------------------------------------------------------------------------
 // <DANGER> Be careful !!! Before launching this program :
 //    -> Check that the pin below is well connected to an LED ! <-
 // Pin 0, Low level lights the led > Header Pin 11, GPIO17 on RPi, GPIOA0 on NPi
-Led led (0, false);
+PinLed led (0, false);
 // <<<< ---->               End of the settings                      <----- >>>>
 // -----------------------------------------------------------------------------
 

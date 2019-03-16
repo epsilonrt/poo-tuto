@@ -6,6 +6,7 @@
 # Datatypes (KEYWORD1)
 ################################################################################
 Led	KEYWORD1
+PinLed	KEYWORD1
 Switch	KEYWORD1
 SwitchInt	KEYWORD1
 Chaser	KEYWORD1
@@ -18,8 +19,9 @@ ChangedHandler	KEYWORD1
 ################################################################################
 SwitchInt	KEYWORD2
 
-# Led
+# PinLed
 Led	KEYWORD2
+PinLed	KEYWORD2
 begin	KEYWORD2
 write	KEYWORD2
 read	KEYWORD2

@@ -64,7 +64,16 @@
     <File Name="src/poo-chaser.cpp"/>
     <File Name="src/poo-switch.cpp"/>
     <File Name="src/poo-switch-int.cpp"/>
+    <File Name="src/poo-pinled.cpp"/>
     <File Name="src/poo-led.cpp"/>
   </VirtualDirectory>
-  <VirtualDirectory Name="include"/>
+  <VirtualDirectory Name="include">
+    <File Name="src/poo-chaser.h"/>
+    <File Name="src/poo-chaser-switch.h"/>
+    <File Name="src/poo-pinled.h"/>
+    <File Name="src/poo-switch.h"/>
+    <File Name="src/poo-switch-int.h"/>
+    <File Name="src/poo-led.h"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
 </CodeLite_Project>

@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "poo-chaser-switch.h"
 
-ChaserSwitch::ChaserSwitch (Led leds[], int nofLeds) :
+ChaserSwitch::ChaserSwitch (Led * leds, int nofLeds) :
   Chaser (leds, nofLeds),
   m_buttons (0),
   m_min_delay (100),
@@ -10,7 +10,7 @@ ChaserSwitch::ChaserSwitch (Led leds[], int nofLeds) :
   m_handler (0)
 {}
 
-ChaserSwitch::ChaserSwitch (Led leds[], int nofLeds, Switch buttons[]) :
+ChaserSwitch::ChaserSwitch (Led * leds, int nofLeds, Switch buttons[]) :
   ChaserSwitch (leds, nofLeds) {
 
   m_buttons = buttons;

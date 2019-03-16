@@ -8,6 +8,7 @@
     <File Name="../src/poo-switch.cpp"/>
     <File Name="../src/poo-chaser.cpp"/>
     <File Name="../src/poo-chaser-switch.cpp"/>
+    <File Name="../src/poo-pinled.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "poo-chaser.h"
 
-Chaser::Chaser (Led leds[], int nofLeds) :
+Chaser::Chaser (Led * leds, int nofLeds) :
   m_leds (leds),
   m_nofleds (-nofLeds),
   m_led (0),

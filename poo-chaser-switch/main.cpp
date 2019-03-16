@@ -22,6 +22,7 @@
 #define Console Serial
 #endif
 
+#include "poo-pinled.h"
 #include "poo-chaser-switch.h"
 
 // Function prototypes
@@ -35,7 +36,7 @@ void printChaserStatus (ChaserSwitch & c);
 // Pin 1, Low level lights the led > Header Pin 12, GPIO18 on RPi, GPIOA6 on NPi
 // Pin 2, Low level lights the led > Header Pin 13, GPIO27 on RPi, GPIOA2 on NPi
 const int nofLeds = 3;
-Led leds[nofLeds] = { Led (0, false), Led (1, false), Led (2, false) };
+PinLed leds[nofLeds] = { PinLed (0, false), PinLed (1, false), PinLed (2, false) };
 
 // Pin 3 > Header Pin 15, GPIO22 on RPi, GPIOA3 on NPi
 // Pin 4 > Header Pin 16, GPIO23 on RPi, GPIOG8 on NPi
