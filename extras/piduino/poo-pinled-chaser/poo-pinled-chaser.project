@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="poo-pcf8574" Version="10.0.0" InternalType="Console">
+<CodeLite_Project Name="poo-pinled-chaser" Version="10.0.0" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="main.cpp"/>
-    <File Name="../src/poo-wireslave.cpp"/>
-    <File Name="../src/poo-pcf8574.cpp"/>
+    <File Name="poo-pinled-chaser-example.cpp"/>
+    <File Name="../../../src/poo-chaser.cpp"/>
+    <File Name="../../../src/poo-pinled.cpp"/>
+    <File Name="../../../src/poo-led.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="-std=c++14;$(shell pkg-config --cflags piduino)" C_Options="-std=c99;$(shell pkg-config --cflags piduino)" Assembler="">
         <IncludePath Value="."/>
-        <IncludePath Value="../src"/>
+        <IncludePath Value="../../../src"/>
       </Compiler>
       <Linker Options="$(shell pkg-config --libs piduino)">
         <LibraryPath Value="."/>
@@ -29,7 +35,7 @@
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
       </Environment>
-      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="yes">
         <DebuggerSearchPaths/>
         <PostConnectCommands/>
         <StartupCommands/>
@@ -100,4 +106,6 @@
       </Completion>
     </Configuration>
   </Settings>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>

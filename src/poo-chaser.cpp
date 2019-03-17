@@ -16,10 +16,10 @@ void Chaser::begin () {
   if (m_nofleds < 0) {
     m_nofleds = -m_nofleds;
     for (int i = 0; i < m_nofleds; i++) {
-      m_leds[i].begin ();
+      m_leds->arrayItem(i)->begin();
     }
     m_led = 0;
-    m_leds[m_led].toggle();
+    m_leds->arrayItem(m_led)->toggle();
     m_lastStep = millis();
   }
 }
@@ -33,7 +33,7 @@ void Chaser::poll() {
     if (dt > m_delay) {
 
       m_lastStep = t;
-      m_leds[m_led].toggle();
+      m_leds->arrayItem(m_led)->toggle();
       m_led += (m_sense == Right ? 1 : -1);
       if (m_led >= m_nofleds) {
         m_led = 0;
@@ -41,7 +41,7 @@ void Chaser::poll() {
       else if (m_led < 0) {
         m_led = m_nofleds - 1;
       }
-      m_leds[m_led].write (true);
+      m_leds->arrayItem(m_led)->write (true);
     }
   }
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="poo-tuto" Database="" Version="10.0.0">
+  <Project Name="poo-switch-int" Path="poo-switch-int/poo-switch-int.project" Active="No"/>
+  <Project Name="poo-switch" Path="poo-switch/poo-switch.project" Active="No"/>
+  <Project Name="poo-tuto" Path="poo-tuto.project" Active="No"/>
+  <Project Name="poo-pcf8574" Path="poo-pcf8574/poo-pcf8574.project" Active="No"/>
+  <Project Name="poo-pcf8574led" Path="poo-pcf8574led/poo-pcf8574led.project" Active="No"/>
+  <Project Name="poo-pcf8574led-chaser" Path="poo-pcf8574led-chaser/poo-pcf8574led-chaser.project" Active="No"/>
+  <Project Name="poo-pinled" Path="poo-pinled/poo-pinled.project" Active="Yes"/>
+  <Project Name="poo-pinled-chaser" Path="poo-pinled-chaser/poo-pinled-chaser.project" Active="No"/>
+  <Project Name="poo-pinled-chaserswitch" Path="poo-pinled-chaserswitch/poo-pinled-chaserswitch.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="poo-switch-int" ConfigName="Debug"/>
+      <Project Name="poo-switch" ConfigName="Debug"/>
+      <Project Name="poo-tuto" ConfigName="Debug"/>
+      <Project Name="poo-pcf8574" ConfigName="Debug"/>
+      <Project Name="poo-pcf8574led" ConfigName="Debug"/>
+      <Project Name="poo-pcf8574led-chaser" ConfigName="Debug"/>
+      <Project Name="poo-pinled" ConfigName="Debug"/>
+      <Project Name="poo-pinled-chaser" ConfigName="Debug"/>
+      <Project Name="poo-pinled-chaserswitch" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="poo-switch-int" ConfigName="Release"/>
+      <Project Name="poo-switch" ConfigName="Release"/>
+      <Project Name="poo-tuto" ConfigName="Debug"/>
+      <Project Name="poo-pcf8574" ConfigName="Release"/>
+      <Project Name="poo-pcf8574led" ConfigName="Release"/>
+      <Project Name="poo-pcf8574led-chaser" ConfigName="Release"/>
+      <Project Name="poo-pinled" ConfigName="Release"/>
+      <Project Name="poo-pinled-chaser" ConfigName="Release"/>
+      <Project Name="poo-pinled-chaserswitch" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

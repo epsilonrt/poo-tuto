@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="poo-led" Version="10.0.0" InternalType="Console">
+<CodeLite_Project Name="poo-switch" Version="10.0.0" InternalType="Console">
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="main.cpp"/>
-    <File Name="../src/poo-pinled.cpp"/>
-    <File Name="../src/poo-led.cpp"/>
+    <File Name="poo-switch-example.cpp"/>
+    <File Name="../../../src/poo-led.cpp"/>
+    <File Name="../../../src/poo-switch.cpp"/>
+    <File Name="../../../src/poo-pinled.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="-std=c++14;$(shell pkg-config --cflags piduino)" C_Options="-std=c99;$(shell pkg-config --cflags piduino)" Assembler="">
         <IncludePath Value="."/>
-        <IncludePath Value="../src"/>
+        <IncludePath Value="../../../src"/>
       </Compiler>
       <Linker Options="$(shell pkg-config --libs piduino)">
         <LibraryPath Value="."/>
@@ -29,7 +30,7 @@
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
       </Environment>
-      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="yes">
         <DebuggerSearchPaths/>
         <PostConnectCommands/>
         <StartupCommands/>

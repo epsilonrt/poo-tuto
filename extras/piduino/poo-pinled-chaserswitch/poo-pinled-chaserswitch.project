@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="poo-chaser-switch" Version="10.0.0" InternalType="Console">
+<CodeLite_Project Name="poo-pinled-chaserswitch" Version="10.0.0" InternalType="Console">
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="main.cpp"/>
-    <File Name="../src/poo-led.cpp"/>
-    <File Name="../src/poo-switch.cpp"/>
-    <File Name="../src/poo-chaser.cpp"/>
-    <File Name="../src/poo-chaser-switch.cpp"/>
-    <File Name="../src/poo-pinled.cpp"/>
+    <File Name="poo-pinled-chaserswitch-example.cpp"/>
+    <File Name="../../../src/poo-led.cpp"/>
+    <File Name="../../../src/poo-switch.cpp"/>
+    <File Name="../../../src/poo-chaser.cpp"/>
+    <File Name="../../../src/poo-chaser-switch.cpp"/>
+    <File Name="../../../src/poo-pinled.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="-std=c++14;$(shell pkg-config --cflags piduino)" C_Options="-std=c99;$(shell pkg-config --cflags piduino)" Assembler="">
         <IncludePath Value="."/>
-        <IncludePath Value="../src"/>
+        <IncludePath Value="../../../src"/>
       </Compiler>
       <Linker Options="$(shell pkg-config --libs piduino)">
         <LibraryPath Value="."/>

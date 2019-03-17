@@ -7,8 +7,13 @@
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
-Pcf8574::Pcf8574 (byte slaveAddress, TwoWire & bus) :
+Pcf8574::Pcf8574 (uint8_t slaveAddress, TwoWire & bus) :
   WireSlave (slaveAddress, bus), m_mode (0xFF), m_out (0)  {
+}
+
+// -----------------------------------------------------------------------------
+Pcf8574::~Pcf8574() {
+  WireSlave::write (0xFF);
 }
 
 // -----------------------------------------------------------------------------
@@ -17,13 +22,13 @@ bool Pcf8574::write () {
 }
 
 // -----------------------------------------------------------------------------
-bool Pcf8574::write (byte value) {
+bool Pcf8574::write (uint8_t value) {
   m_out = value & ~m_mode;
   return write();
 }
 
 // -----------------------------------------------------------------------------
-byte Pcf8574::read() {
+uint8_t Pcf8574::read() {
   return (WireSlave::read() & m_mode) | (m_out & ~m_mode);
 }
 
@@ -33,7 +38,7 @@ bool Pcf8574::begin () {
 }
 
 // -----------------------------------------------------------------------------
-bool Pcf8574::setMode (byte pinmodes) {
+bool Pcf8574::setMode (uint8_t pinmodes) {
   pinmodes = ~pinmodes;
 
   if (pinmodes != m_mode) {
@@ -51,9 +56,9 @@ int Pcf8574::mode () const {
 // -----------------------------------------------------------------------------
 bool Pcf8574::setMode (int pin, int pinmode) {
 
-  if ((pin < 8) &&
-    ( (pinmode == OUTPUT) || (pinmode == INPUT) || (pinmode == INPUT_PULLUP))) {
-    byte pinmodes = mode();
+  if ( (pin < 8) &&
+       ( (pinmode == OUTPUT) || (pinmode == INPUT) || (pinmode == INPUT_PULLUP))) {
+    uint8_t pinmodes = mode();
 
     if (pinmode == OUTPUT) {
 

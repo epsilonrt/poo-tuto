@@ -9,6 +9,8 @@ class PinLed : public Led {
     bool read() const;
     void write (bool on);
     int pin() const;
+
+    size_t size () const { return sizeof(PinLed); }
   private:
     int m_pin;
 };
