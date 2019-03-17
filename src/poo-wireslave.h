@@ -6,7 +6,7 @@
 // I2c Slave Class
 class WireSlave {
   public:
-    WireSlave (uint16_t slaveAddress, TwoWire & bus = Wire);
+    WireSlave (uint8_t slaveAddress, TwoWire & bus = Wire);
     bool write (uint8_t dataAddress, const uint8_t *values, uint16_t len);
     bool write (uint8_t dataAddress, uint8_t value);
     bool write (const uint8_t *values, uint16_t len);
@@ -15,13 +15,13 @@ class WireSlave {
     uint8_t read (uint8_t dataAddress);
     uint8_t read (uint8_t *values, uint16_t len);
     uint8_t read();
-    inline uint16_t address() const {
+    inline uint8_t address() const {
       return m_address;
     }
-    inline void setAddress (uint16_t slaveAddress) {
+    inline void setAddress (uint8_t slaveAddress) {
       m_address = slaveAddress;
     }
 private:
     TwoWire & m_bus;
-    uint16_t m_address;
+    uint8_t m_address;
 };

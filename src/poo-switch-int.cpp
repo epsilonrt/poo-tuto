@@ -1,3 +1,4 @@
+#ifdef __unix__
 #include "poo-switch-int.h"
 
 SwitchInt::SwitchInt (int pin) : Switch (pin) {}
@@ -20,3 +21,5 @@ void SwitchInt::muxIsr (void * data) {
 
   sw.poll();
 }
+
+#endif

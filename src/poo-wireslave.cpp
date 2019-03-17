@@ -7,7 +7,7 @@
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
-WireSlave::WireSlave (uint16_t slaveAddress, TwoWire & bus) :
+WireSlave::WireSlave (uint8_t slaveAddress, TwoWire & bus) :
   m_bus (bus), m_address (slaveAddress)  {
 }
 

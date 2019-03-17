@@ -8,26 +8,31 @@
 Led	KEYWORD1
 PinLed	KEYWORD1
 Switch	KEYWORD1
-SwitchInt	KEYWORD1
 Chaser	KEYWORD1
 Sense	KEYWORD1
 ChaserSwitch	KEYWORD1
 ChangedHandler	KEYWORD1
+WireSlave	KEYWORD1
+Pcf8574	KEYWORD1
+Pcf8574Led	KEYWORD1
 
 ################################################################################
 # Methods and Functions (KEYWORD2)
 ################################################################################
-SwitchInt	KEYWORD2
 
-# PinLed
+# Led
 Led	KEYWORD2
-PinLed	KEYWORD2
 begin	KEYWORD2
 write	KEYWORD2
 read	KEYWORD2
 toggle	KEYWORD2
-pin	KEYWORD2
 activeState	KEYWORD2
+size	KEYWORD2
+arrayItem	KEYWORD2
+
+# PinLed
+PinLed	KEYWORD2
+pin	KEYWORD2
 
 # Switch
 Switch	KEYWORD2
@@ -58,6 +63,20 @@ setMaxDelay	KEYWORD2
 changedHandler	KEYWORD2
 setChangedHandler	KEYWORD2
 callChangedHandler	KEYWORD2
+
+# WireSlave
+WireSlave	KEYWORD2
+address	KEYWORD2
+setAddress	KEYWORD2
+
+# Pcf8574	
+Pcf8574	KEYWORD2
+mode	KEYWORD2
+setMode	KEYWORD2
+
+# Pcf8574Led
+Pcf8574Led	KEYWORD2
+controller	KEYWORD2
 
 ################################################################################
 # Instances (KEYWORD2)
